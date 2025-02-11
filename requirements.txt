@@ -2,5 +2,5 @@ fastapi==0.109.0
 uvicorn==0.27.0
 pydantic
 pytest==6.2.2
-yping
+typing
 mysql-connector-python
