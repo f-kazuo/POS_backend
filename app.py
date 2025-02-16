@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,7 +7,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://tech0-gen8-step4-pos-app-87.azurewebsites.net/"],
+    allow_origins=["https://tech0-gen8-step4-pos-app-87.azurewebsites.net"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
