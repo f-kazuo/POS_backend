@@ -41,7 +41,7 @@ class PurchaseRequest(BaseModel):
     items: List[PurchaseItem]
 
 # API endpoints
-@app.get("/api/product/{code}")
+@app.get("/product/{code}")
 def get_product(code: str):
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
@@ -54,7 +54,7 @@ def get_product(code: str):
         raise HTTPException(status_code=404, detail="Product not found")
     return product
 
-@app.post("/api/purchase/")
+@app.post("/purchase/")
 def create_purchase(request: PurchaseRequest):
     conn = get_db_connection()
     cursor = conn.cursor()
